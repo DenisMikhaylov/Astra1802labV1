@@ -90,12 +90,11 @@ pdpl-user username
 ## Задания
 
 ### Задание 1. Проверка состояния системы
-1. Проверьте режим работы подсистемы PDP с помощью `pdpctl get-mode`.  
+1. Проверьте режим работы подсистемы PDP с помощью `astra-mic-control status`.  
 2. Проверьте статус мандатного контроля целостности (МКЦ) командой `sudo astra-mic-control status` .  
 3. Проверьте, загружен ли модуль ядра Parsec: `lsmod | grep parsec` .  
 4. Убедитесь, что файловая система поддерживает расширенные атрибуты: `mount | grep xattr` .  
-5. Выведите список доступных уровней конфиденциальности: `pdpctl list-levels` .  
-6. Выведите список доступных категорий: `pdpctl list-categories` .
+
 
 ---
 
@@ -207,9 +206,6 @@ lsmod | grep parsec
 # Проверка поддержки xattr
 mount | grep xattr
 
-# Список доступных уровней и категорий
-pdpctl list-levels
-pdpctl list-categories
 
 # ============ ЗААНИЕ 2 ============
 cd ~
@@ -317,8 +313,6 @@ sudo -u testuser cat /home/sa/lab_mandatory/file2.txt
     echo "=== Mandatory Access Control Report ==="
     echo "Date: $(date)"
     echo
-    echo "=== PDP Mode ==="
-    pdpctl get-mode
     echo
     echo "=== User Labels (sa) ==="
     pdpl-user sa
