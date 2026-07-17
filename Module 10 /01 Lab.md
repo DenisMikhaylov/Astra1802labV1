@@ -36,7 +36,7 @@
 | `pdpl-user` | Управление допустимыми метками пользователей  | `sudo pdpl-user -i 63 username` |
 | `userlev` | Просмотр и редактирование уровней доступа  | `userlev --help` |
 | `pdpl-ps` | Чтение мандатного контекста процесса  | `pdpl-ps $$` |
-| `pdpctl` | Управление состоянием подсистемы PDP | `pdpctl get-mode` |
+
 
 ### 3. Синтаксис pdpl-file
 
@@ -77,9 +77,6 @@ sudo pdpl-user -m Уровень_0:Уровень_3 -i 0 -c 0:Категория
 
 ### 5. Проверка состояния подсистемы
 
-```bash
-# Проверка режима PDP
-pdpctl get-mode        # Ожидаемый вывод: enforcing
 
 # Проверка статуса МКЦ
 sudo astra-mic-control status
